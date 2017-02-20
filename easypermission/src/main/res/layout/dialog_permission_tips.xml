@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/permission_dialog_tips_main_background"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/permission_dialog_tips_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/permission_dialog_tips_main_background"
+        android:gravity="center"
+        android:paddingBottom="@dimen/permission_dialog_tips_title_bottom_margin"
+        android:paddingLeft="@dimen/permission_dialog_title_padding_lr"
+        android:paddingRight="@dimen/permission_dialog_title_padding_lr"
+        android:paddingTop="@dimen/permission_dialog_tips_title_top_margin"
+        android:text="@string/permission_dialog_title"
+        android:textColor="@color/permission_dialog_tips_black_text"
+        android:textSize="@dimen/permission_dialog_tips_title_text_size"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/permission_dialog_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/permission_dialog_tips_main_text_bottom_padding"
+        android:layout_marginLeft="@dimen/permission_dialog_content_margin"
+        android:layout_marginRight="@dimen/permission_dialog_content_margin">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/permission_dialog_tips_harm_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/permission_dialog_tips_white"
+        android:gravity="center"
+        android:paddingBottom="@dimen/permission_dialog_tips_harm_bottom_margin"
+        android:paddingTop="@dimen/permission_dialog_tips_harm_top_margin"
+        android:text="@string/permission_dialog_tips_not_harm"
+        android:textColor="@color/permission_dialog_tips_gray_text"
+        android:textSize="@dimen/permission_dialog_tips_harm_text_size"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/permission_dialog_tips_white">
+
+        <TextView
+            android:id="@+id/permission_dialog_tips_next_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/permission_dialog_tips_next_bottom_height"
+            android:layout_marginBottom="@dimen/permission_dialog_tips_next_buttom_bottom_margin"
+            android:layout_marginLeft="@dimen/permission_dialog_tips_next_buttom_left_margin"
+            android:layout_marginRight="@dimen/permission_dialog_tips_next_buttom_right_margin"
+            android:background="@drawable/shape_permission_next_button"
+            android:clickable="true"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/permission_dialog_next_step"
+            android:textColor="@color/permission_dialog_tips_white"
+            android:textSize="@dimen/permission_dialog_tips_next_button_text_size"/>
+    </FrameLayout>
+</LinearLayout>

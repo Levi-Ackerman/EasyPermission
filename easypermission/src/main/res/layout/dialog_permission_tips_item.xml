@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/permission_dialog_tips_item_storage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/permission_dialog_tips_main_background"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/permission_dialog_tips_icon"
+        android:layout_width="@dimen/permission_dialog_tips_icon_length"
+        android:layout_height="@dimen/permission_dialog_tips_icon_length"
+        android:layout_marginBottom="@dimen/permission_dialog_tips_icon_bottom_margin"
+        android:layout_marginEnd="@dimen/permission_dialog_tips_icon_right_margin"
+        android:layout_marginRight="@dimen/permission_dialog_tips_icon_right_margin"
+        android:layout_marginTop="@dimen/permission_dialog_tips_icon_top_margin"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/permission_dialog_tips_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permission_dialog_write_external_storage"
+            android:textColor="@color/permission_dialog_tips_black_text"
+            android:textSize="@dimen/permission_dialog_tips_bold_text_size"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/permission_dialog_tips_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/permission_dialog_tips_between_bold_description"
+            android:text="@string/permission_dialog_descript_write_external_storage"
+            android:textColor="@color/permission_dialog_tips_gray_text"
+            android:textSize="@dimen/permission_dialog_tips_description_text_size"/>
+    </LinearLayout>
+</LinearLayout>

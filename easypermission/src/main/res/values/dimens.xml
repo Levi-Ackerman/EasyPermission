@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="permission_dialog_tips_title_top_margin">30dp</dimen>
+    <dimen name="permission_dialog_tips_title_bottom_margin">14dp</dimen>
+    <dimen name="permission_dialog_tips_icon_length">30dp</dimen>
+    <dimen name="permission_dialog_tips_icon_right_margin">12dp</dimen>
+    <dimen name="permission_dialog_tips_between_bold_description">2dp</dimen>
+    <dimen name="permission_dialog_tips_icon_left_margin">660dp</dimen>
+    <dimen name="permission_dialog_tips_icon_top_margin">14dp</dimen>
+    <dimen name="permission_dialog_tips_icon_bottom_margin">14dp</dimen>
+    <dimen name="permission_dialog_tips_main_text_bottom_padding">14dp</dimen>
+    <dimen name="permission_dialog_tips_harm_top_margin">15dp</dimen>
+    <dimen name="permission_dialog_tips_harm_bottom_margin">15dp</dimen>
+    <dimen name="permission_dialog_tips_next_buttom_left_margin">32dp</dimen>
+    <dimen name="permission_dialog_tips_next_buttom_right_margin">32dp</dimen>
+    <dimen name="permission_dialog_tips_next_buttom_bottom_margin">20dp</dimen>
+    <dimen name="permission_dialog_tips_next_bottom_height">36dp</dimen>
+
+    <dimen name="permission_dialog_tips_title_text_size">18dp</dimen>
+    <dimen name="permission_dialog_tips_bold_text_size">16dp</dimen>
+    <dimen name="permission_dialog_tips_description_text_size">12dp</dimen>
+    <dimen name="permission_dialog_tips_harm_text_size">12dp</dimen>
+    <dimen name="permission_dialog_tips_next_button_text_size">16dp</dimen>
+
+    <dimen name="permission_dialog_setting_title_top_margin">30dp</dimen>
+    <dimen name="permission_dialog_setting_title_bottom_margin">30dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_width">210dp</dimen>
+    <dimen name="permission_dialog_setting_bar_height">35dp</dimen>
+    <dimen name="permission_dialog_setting_back_arrow_length">15dp</dimen>
+    <dimen name="permission_dialog_setting_back_arrow_margin">10dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_padding_top">10dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_margin">10dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_logo_padding_bottom">22dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_logo_length">22dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_logo_margin_right">8dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_brand_text_size">16dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_function_size">14dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_switch_width">30dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_switch_height">21dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_divide_margin">10dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_gradient_height">10dp</dimen>
+    <dimen name="permission_dialog_setting_exit_margin">20dp</dimen>
+    <dimen name="permission_dialog_setting_exit_text_size">16dp</dimen>
+    <dimen name="permission_dialog_setting_subwindow_divide_height">0.5dp</dimen>
+    <dimen name="permission_dialog_content_margin">32dp</dimen>
+    <dimen name="permission_dialog_title_padding_lr">16dp</dimen>
+</resources>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/permission_dialog_setting_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/permission_dialog_tips_main_background"
+        android:gravity="center"
+        android:paddingBottom="@dimen/permission_dialog_setting_title_bottom_margin"
+        android:paddingLeft="@dimen/permission_dialog_title_padding_lr"
+        android:paddingRight="@dimen/permission_dialog_title_padding_lr"
+        android:paddingTop="@dimen/permission_dialog_setting_title_top_margin"
+        android:text="@string/permission_dialog_title"
+        android:textColor="@color/permission_dialog_tips_black_text"
+        android:textSize="@dimen/permission_dialog_tips_title_text_size"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/permission_dialog_setting_subwindow_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/permission_dialog_setting_bar_height"
+            android:background="@color/permission_dialog_setting_bar_background">
+
+            <ImageView
+                android:id="@+id/permission_dialog_setting_title_back"
+                android:layout_width="@dimen/permission_dialog_setting_back_arrow_length"
+                android:layout_height="@dimen/permission_dialog_setting_back_arrow_length"
+                android:layout_margin="@dimen/permission_dialog_setting_back_arrow_margin"/>
+
+            <TextView
+                android:id="@+id/permission_dialog_setting_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/permission_setting_explain_major_text"
+                android:textColor="@color/permission_dialog_tips_white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/permission_dialog_tips_white"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/permission_dialog_setting_subwindow_padding_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/permission_dialog_setting_subwindow_margin"
+                android:layout_marginRight="@dimen/permission_dialog_setting_subwindow_margin"
+                android:paddingBottom="@dimen/permission_dialog_setting_subwindow_logo_padding_bottom">
+
+                <ImageView
+                    android:id="@+id/permission_dialog_setting_logo_icon"
+                    android:layout_width="@dimen/permission_dialog_setting_subwindow_logo_length"
+                    android:layout_height="@dimen/permission_dialog_setting_subwindow_logo_length"
+                    android:layout_marginEnd="@dimen/permission_dialog_setting_subwindow_logo_margin_right"
+                    android:layout_marginRight="@dimen/permission_dialog_setting_subwindow_logo_margin_right"/>
+
+                <TextView
+                    android:id="@+id/permission_dialog_setting_logo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/permission_setting_explain_brand"
+                    android:textColor="@color/permission_dialog_tips_black_text"
+                    android:textSize="@dimen/permission_dialog_setting_subwindow_brand_text_size"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/permission_dialog_setting_item_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/permission_dialog_setting_subwindow_margin"
+                android:layout_marginRight="@dimen/permission_dialog_setting_subwindow_margin"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/permission_dialog_setting_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/permission_dialog_write_external_storage"
+                    android:textColor="@color/permission_dialog_tips_black_text"
+                    android:textSize="@dimen/permission_dialog_setting_subwindow_function_size"/>
+
+                <ImageView
+                    android:id="@+id/permission_dialog_setting_switch_storage"
+                    android:layout_width="@dimen/permission_dialog_setting_subwindow_switch_width"
+                    android:layout_height="@dimen/permission_dialog_setting_subwindow_switch_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/permission_dialog_setting_divide"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/permission_dialog_setting_subwindow_divide_height"
+                android:layout_marginBottom="@dimen/permission_dialog_setting_subwindow_divide_margin"
+                android:layout_marginTop="@dimen/permission_dialog_setting_subwindow_divide_margin"
+                android:background="@color/permission_dialog_setting_divide"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:id="@+id/permission_dialog_setting_item_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/permission_dialog_setting_subwindow_margin"
+                android:layout_marginRight="@dimen/permission_dialog_setting_subwindow_margin"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/permission_dialog_setting_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/permission_dialog_read_phone_state"
+                    android:textColor="@color/permission_dialog_tips_black_text"
+                    android:textSize="@dimen/permission_dialog_setting_subwindow_function_size"/>
+
+                <ImageView
+                    android:id="@+id/permission_dialog_setting_switch_phone"
+                    android:layout_width="@dimen/permission_dialog_setting_subwindow_switch_width"
+                    android:layout_height="@dimen/permission_dialog_setting_subwindow_switch_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/permission_dialog_setting_subwindow_gradient_height"
+                android:background="@drawable/shape_permission_gradient"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/permission_dialog_setting_harm_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/permission_dialog_tips_white"
+        android:gravity="center"
+        android:paddingBottom="@dimen/permission_dialog_tips_harm_bottom_margin"
+        android:paddingTop="@dimen/permission_dialog_tips_harm_top_margin"
+        android:text="@string/permission_dialog_tips_not_harm"
+        android:textColor="@color/permission_dialog_tips_gray_text"
+        android:textSize="@dimen/permission_dialog_tips_harm_text_size"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/permission_dialog_tips_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/permission_dialog_setting_next_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/permission_dialog_tips_next_bottom_height"
+            android:layout_marginLeft="@dimen/permission_dialog_tips_next_buttom_left_margin"
+            android:layout_marginRight="@dimen/permission_dialog_tips_next_buttom_right_margin"
+            android:background="@drawable/shape_permission_next_button"
+            android:clickable="true"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/permission_setting_goto_setting"
+            android:textColor="@color/permission_dialog_tips_white"
+            android:textSize="@dimen/permission_dialog_tips_next_button_text_size"/>
+
+        <TextView
+            android:id="@+id/permission_dialog_setting_exit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/permission_dialog_setting_exit_margin"
+            android:text="@string/permission_setting_exit_uc"
+            android:textColor="@color/permission_dialog_setting_exit_button_text"
+            android:textSize="@dimen/permission_dialog_setting_exit_text_size"/>
+    </LinearLayout>
+</LinearLayout>
