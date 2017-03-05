@@ -1,8 +1,10 @@
 package top.lizhengxian.easypermission;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,18 +27,57 @@ public class EasyPermissionDialog extends AlertDialog {
     private TextView mNextButton;
     private ListView mPermListView;
     private TextView mExitButton;
+    private List<Permission> mPermissions;
 
-    protected EasyPermissionDialog(Context context) {
+    protected EasyPermissionDialog(final Context context) {
         super(context);
         this.mContext = context;
         mTipsDialogView = LayoutInflater.from(context).inflate(R.layout.dialog_permission_tips, null);
-        setView(mTipsDialogView);
+        setView(mTipsDialogView,0,0,0,0);
         mTitle = (TextView) mTipsDialogView.findViewById(R.id.permission_dialog_tips_title);
         mContentText = (TextView) mTipsDialogView.findViewById(R.id.permission_dialog_tips_harm_text);
         mNextButton = (TextView) mTipsDialogView.findViewById(R.id.permission_dialog_tips_next_button);
         mPermListView = (ListView) mTipsDialogView.findViewById(R.id.permission_dialog_list);
+        mNextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                    String[] permissionStrs = new String[mPermissions.size()];
+                    for (int i = 0; i < mPermissions.size(); i++) {
+                        permissionStrs[i] = mPermissions.get(i).permName;
+                    }
+                    ((Activity)context).requestPermissions(permissionStrs,0);
+                }
+            }
+        });
     }
 
+    private void setPermissionList(List<Permission> permissions) {
+        this.mPermissions = permissions;
+        PermissionListAdapter adapter = new PermissionListAdapter(this.mContext);
+        adapter.setPermissions(permissions);
+        mPermListView.setAdapter(adapter);
+    }
+
+    private void setNextButton(String text, final OnClickListener onClickListener) {
+        mNextButton.setText(text);
+        mNextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickListener.onClick(EasyPermissionDialog.this, DialogInterface.BUTTON_POSITIVE);
+            }
+        });
+    }
+
+    private void setExitButton(String text, final OnClickListener onClickListener) {
+        mExitButton.setText(text);
+        mExitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickListener.onClick(EasyPermissionDialog.this, DialogInterface.BUTTON_NEGATIVE);
+            }
+        });
+    }
     @Override
     public void setTitle(CharSequence title) {
         mTitle.setText(title);
@@ -71,8 +112,8 @@ public class EasyPermissionDialog extends AlertDialog {
             return this;
         }
 
-        public Builder addPermission(int imageResId, String[] permission, String permTitle, String permDescriptions) {
-            mPermissions.add(new Permission(permTitle,permDescriptions,imageResId,permission));
+        public Builder addPermission(Permission permission){
+            mPermissions.add(permission);
             return this;
         }
 
@@ -96,29 +137,4 @@ public class EasyPermissionDialog extends AlertDialog {
         }
     }
 
-    private void setPermissionList(List<Permission> permissions) {
-        PermissionListAdapter adapter = new PermissionListAdapter(this.mContext);
-        adapter.setPermissions(permissions);
-        mPermListView.setAdapter(adapter);
-    }
-
-    private void setNextButton(String text, final OnClickListener onClickListener) {
-        mNextButton.setText(text);
-        mNextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClickListener.onClick(EasyPermissionDialog.this, DialogInterface.BUTTON_POSITIVE);
-            }
-        });
-    }
-
-    private void setExitButton(String text, final OnClickListener onClickListener) {
-        mExitButton.setText(text);
-        mExitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onClickListener.onClick(EasyPermissionDialog.this, DialogInterface.BUTTON_NEGATIVE);
-            }
-        });
-    }
 }

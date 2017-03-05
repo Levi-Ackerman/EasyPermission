@@ -11,4 +11,6 @@
     <color name="permission_dialog_setting_bar_background">#4d4e54</color>
     <color name="permission_dialog_setting_divide">#f5f5f5</color>
     <color name="permission_dialog_setting_exit_button_text">#bbbbbb</color>
+
+    <color name="transparent">#01000000</color>
 </resources>
